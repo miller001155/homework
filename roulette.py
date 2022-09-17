@@ -18,10 +18,10 @@ elif number == 0 or number == 37:
 else:
     print(f'выигранная ставка: Черное')
 if number >= 1 and number <= 36:
-    if number % 2 == 1:
-        print(f'Выигранная ставка : Нечетное')
-    else:
+    if number % 2 == 0:
         print(f'Выигранная ставка : Четное')
+    else:
+        print(f'Выигранная ставка : Нечетное')
 
 if number >= 1 and number <= 18:
     print('Выиграла ставка: от 1 до 18')
