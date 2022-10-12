@@ -21,13 +21,13 @@ class Car:
         self.speed = 0
 
     def speed_display(self):
-        print(self.speed)
+        print(f'{self.speed} kwh')
 
     def reverse_gear(self):
         self.speed = - self.speed
 
     def speed_limit(self):
-        self.speed = f'100 км/ч'
+        self.speed = 100
 
 
 opel = Car('opel', 'Astra', 2010, )
