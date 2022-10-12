@@ -26,7 +26,7 @@ class Car:
         self.speed = - self.speed
 
     def speed_limit(self):
-        self.speed = f'100 км/ч '
+        self.speed = f'100 км/ч'
 
 
 opel = Car('opel', 'Astra', 2010, )
