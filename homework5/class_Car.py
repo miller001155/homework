@@ -1,4 +1,5 @@
 class Car:
+    '''Создание класса машин'''
     def __init__(self, stamp, model, year):
         self.stamp = stamp
         self.model = model
