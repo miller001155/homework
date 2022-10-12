@@ -4,6 +4,7 @@ class Car:
         self.model = model
         self.year = year
         self.speed = 0
+
     def get_descriptive_name(self):
         '''Возвращает аккуратно отформотированное описание'''
         long_name = f'{self.year} {self.stamp} {self.model}'
@@ -28,4 +29,4 @@ class Car:
         self.speed = f'100 км/ч'
 
 
-opel = Car('opel', 'Astra', 2010,)
+opel = Car('opel', 'Astra', 2010, )
