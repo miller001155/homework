@@ -7,6 +7,4 @@ user = int(input('Введите трехзначное число:'))  # зап
 if list_of_numbers.count(user):  # проверка есть ли введенное число в списке
     print(list_of_numbers.index(user))  # вывод на экран индекса, если нужна позиция то к индексу можно добавить единицу
 else:
-    print('That is not in the list')  #  если значение не найдено
-
-
+    print('That is not in the list')  # если значение не найдено
