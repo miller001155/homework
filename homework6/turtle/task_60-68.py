@@ -22,7 +22,6 @@ turtle.exitonclick()
 '''задача 63'''
 
 
-
 '''задача 64'''
 for i in range(5):
     turtle.forward(100)
