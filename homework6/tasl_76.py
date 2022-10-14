@@ -5,7 +5,7 @@ count = len(names_of_friends)  # переменная для подсчета д
 if user == 'y':  #  условие для добовления друзей
     friend = input('Имена друзей:')  #  запрос на ввод имени другв
     while friend != 'no':  #  цисл пока мользователь не введет no
-        names_of_friends.append(friend)  # добавление имени в список здузей
+        names_of_friends.append(friend)  # добавление имени в список друзей
         count += 1  #  добавление в счетчику
         friend = input('Имена друзей:') # повторный запрос
     print(count)  # вывод количества друзей
