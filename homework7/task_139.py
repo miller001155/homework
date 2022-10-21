@@ -29,4 +29,4 @@ with sq.connect('PhoneBook.db') as con:
     cur.execute('''
         INSERT INTO name (id, First_name, Surname, Phone_Number) VALUES (5, 'Mark', 'Smith', 01223855534);
     ''')
-    con.commit()  # сохранение изменений
+    con.commit()  # сохранение изменений_
