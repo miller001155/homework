@@ -1,6 +1,6 @@
 import sqlite3 as sq  # импорт нужной библиотеки
 
-with sq.connect('PhoneBook.db') as con:
+with sq.connect('PhoneBook_8.db') as con:
     cur = con.cursor()
 
     cur.execute("""
