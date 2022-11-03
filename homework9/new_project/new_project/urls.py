@@ -18,8 +18,6 @@ from django.urls import path
 from seasons import views
 urlpatterns = [
     path('', views.index),
-    path('winter/', views.winter),
-    path('spring/', views.spring),
-    path('summer/', views.summer),
-    path('autumn/', views.autumn),
+    path('<index/>', views.index),
+
 ]
