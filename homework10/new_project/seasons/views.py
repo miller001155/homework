@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 
-dicts = {
+dicts = {  # создаем словарь для месяцев
     "january": 'Январь-почти весна',
     "february": 'Февраль -только закончилась зима',
     "mart": 'Май - весна',
@@ -17,12 +17,12 @@ dicts = {
 }
 
 
-def hello(request, hello):
-    fun = dicts.get(hello, None)
-    if fun:
-        return HttpResponse(fun)
+def hello(request, hello):  # создаем функцию, которая принимает значение hello
+    fun = dicts.get(hello, None)  # обращаемся к словарю и берем значение по ключу
+    if fun:  # если такой ключ в словаре
+        return HttpResponse(fun)  # то выводим его значение на экран
     else:
-        return HttpResponse("Такого запроса не существует")
+        return HttpResponseNotFound("Такого запроса не существует")  # если такого значения нет
 
 def index(request):
     return HttpResponse('Стартовая страница')
