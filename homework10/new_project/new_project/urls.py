@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from seasons.views import hello, index
 urlpatterns = [
-    path('', index),
-    path('admin/', admin.site.urls),
-    path('<hello>', hello),
+    path('', index),  # домашняя страница
+    path('admin/', admin.site.urls),  # панель администратора
+    path('<hello>', hello),  # динамический url
 
 ]
