@@ -1,14 +1,13 @@
-import json
-
 import requests
 from bs4 import BeautifulSoup
+import json
 
 JSON = 'cards.json'
 HOST = 'https:www.lamoda.by/'
-URL = ''
+URL = 'https://www.lamoda.by/c/371/clothes-trikotazh/'
 HEADERS = {
-    'accept': '',
-    'user-agent': ''
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'user-agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0'
 }
 
 
@@ -19,23 +18,23 @@ def get_html(url, params=''):
 
 def get_content(html):
     soup = BeautifulSoup(html, 'html.parser')
-    items = soup.find_all('div', 'class=')
+    items = soup.find_all('div', class_="x-product-card-description")
     cards = []
     for item in items:
         cards.append(
             {
-                'title': item.find('div', 'class=''').get_text(),
-                'brand': item.find('div', 'class=''').get_text(),
-                'price': item.find('div', 'class=''').get_text(strip=True),
+                'title': item.find('div', class_='x-product-card-description__product-name').get_text(),
+                'brand': item.find('div', class_='x-product-card-description__brand-name').get_text(),
+                'price': item.find('div', class_='x-product-card-description__microdata-wrap').get_text(strip=True),
 
-            }
-        )
+    }
+    )
     return cards
 
 
 def save_doc(items, path):
     with open(path, 'w') as file:
-        json.dump(items, file, indent=3, ensure_ascii=False)
+        json.dump(items, file, indent=4, ensure_ascii=False)
 
 
 def parser():
